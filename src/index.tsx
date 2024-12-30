@@ -9,9 +9,12 @@ const root = ReactDOM.createRoot(
     document.getElementById("root") as HTMLElement
 );
 
+const basename =
+    process.env.NODE_ENV === "production" ? "/webpack-react-boilerplate" : "/";
+
 root.render(
     <React.StrictMode>
-        <BrowserRouter>
+        <BrowserRouter basename={basename}>
             <Routes>
                 <Route path="/" element={<App/>}/>
                 <Route path="/page" element={<Page/>}/>
