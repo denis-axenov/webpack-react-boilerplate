@@ -1,13 +1,13 @@
 import React from "react";
 import {Link} from "react-router";
 
-const App = () => {
+const Page = () => {
     return (
         <>
             <h1>Webpack React Boilerplate</h1>
-            <Link to="/page">React Router Example</Link>
+            <Link to="/">Return to home page</Link>
         </>
     );
 }
 
-export default App;
+export default Page;

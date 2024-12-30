@@ -104,7 +104,7 @@ module.exports = (env, argv) => {
                 filename: 'bundle.css'
             }),
             new HtmlWebpackPlugin({
-                templateContent:  `<div id="root"></div>`,
+                templateContent: `<div id="root"></div>`,
                 inject: 'body',
                 meta: {
                     viewport: "width=device-width, initial-scale=1.0"
@@ -133,10 +133,8 @@ module.exports = (env, argv) => {
                 directory: buildFolder
             },
             compress: isProduction,
+            historyApiFallback: true,
             port: 9000,
-            watchFiles: [
-                './src/*.html'
-            ],
             hot: true,
             open: true
         }
