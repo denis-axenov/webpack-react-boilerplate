@@ -19,4 +19,20 @@ body {
   font-family: "Open Sans", system-ui;
 
   @include effect.transition();
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+a {
+  color: #333;
+
+  @include effect.transition();
+
+  &:hover {
+    color: cornflowerblue;
+  }
 }
